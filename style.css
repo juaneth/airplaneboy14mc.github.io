@@ -1,108 +1,80 @@
-#mybar{
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    height:70px;
-    background-color:#262626;
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+	margin: 0;
+	background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
 }
-#bottombar{
-    position:static;
-    top:0;
-    left:0;
-    right:0;
-    height:71px;
-    background-color:#262626;
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
 }
 
 body {
-  background-image: url("./background.jpg");
-  background-attachment: fixed;
+  background: #999;
+  margin: 0;
+  padding: 0;
 }
 
-#wrapper{
-    position:absolute;
-    padding-left: 2%;
-    padding-right: 2%;
-    left: 10.5%;
-    width: 75%;
-    top: 13%;
-    background-color:#262626d8
+nav {
+  float: right;
 }
-  
-  .vertical-menu {
-    position: sticky;
-    width: 150px; /* Set a width if you like */
-    padding-top: 3.9%;
-  }
-  
-  .vertical-menu a {
-    background-color: #333; /* Grey background color */
-    color: black; /* Black text color */
-    display: block; /* Make the links appear below each other */
-    padding: 12px; /* Add some padding */
-    font-size: 100%;
-    text-decoration: none; /* Remove underline from links */
-  }
-  
-  .vertical-menu a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
-  }
-  
-  .vertical-menu a.active {
-    background-color: #333; /* Add a green color to the "active/current" link */
-    border-left: 3px solid white;
-    color: white;
-    padding-left: 15%;
-  }
-  .fade-in {
-    animation: fadeIn ease 0.5s;
-    -webkit-animation: fadeIn ease 0.5s;
-    -moz-animation: fadeIn ease 0.5s;
-    -o-animation: fadeIn ease 0.5s;
-    -ms-animation: fadeIn ease 0.5s;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-o-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-  }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-top: 23px;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #444;
+
+  position: left;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
 }
